@@ -1,4 +1,5 @@
-const Data = [
+import {IMusic} from '@/utils/interface'
+const Data:IMusic[] = [
 	{
 		id: 1,
 		title: 'As You Were - TrackTribe',

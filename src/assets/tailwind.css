@@ -18,6 +18,10 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-image: url('./images/bg01.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 i {
 	cursor: pointer;
@@ -25,4 +29,37 @@ i {
 }
 ul {
 	list-style: none;
+}
+.play{
+	background: linear-gradient(#fff 0%,#cecaca 100%);
+}
+.play::before{
+	content: '';
+	position: absolute;
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 50%;
+	background: linear-gradient(#8dadff,#6e72a3 100%);
+}
+.volume{
+	transform: bottom .2s linear;
+}
+.volume.show{
+	bottom: 0;
+}
+.shape-1{
+	background: radial-gradient(circle at 25px 65px,#9b22ea,#005);
+}
+.shape-2{
+	background: radial-gradient(circle at 45px 90px,#ea22b1,#111);
+	right: -65px;
+	bottom: -65px;
+}
+.shape-3{
+	width: 60px;
+	height: 60px;
+	background: #08e2ff;
+	right: 7px;
+	top: 10px;
+	filter: blur(20px);
 }
