@@ -63,3 +63,13 @@ ul {
 	top: 10px;
 	filter: blur(20px);
 }
+.list{
+	box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+	transition: all .2s ease-out;
+}
+.list ul::-webkit-scrollbar{
+	width: 0px;
+}
+.playing{
+	background: papayawhip;
+}

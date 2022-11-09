@@ -2,8 +2,8 @@
 	<div class="w-full p-6 overflow-hidden" >
 		<div class="w-full flex justify-between items-center" >
 			<i class="material-symbols-outlined">expand_more</i>
-			<span>Now Playing 1/9</span>
-			<i class="material-symbols-outlined">queue_music</i>
+			<span>Now Playing {{handleMusicNumber()+1+ "/" +handleLengthMusicNumber()}}</span>
+			<i class="material-symbols-outlined" @click="handleOpen()">queue_music</i>
 		</div>
 		<div class="w-full h-[270px] flex justify-center relative" >
 			<img class="w-[200px] h-[200px] object-cover rounded-[50%]" src="@/assets/images/img01.jpg" alt="">
@@ -35,19 +35,34 @@
 				<span>50</span>
 			</div>
 		</div>
-		<audio src="@/assets/musics/As You Were - TrackTribe.mp3" hidden></audio>
+		<audio :src="music[handleMusicNumber()].src" hidden :onloadstart="handleLoadStart()" ></audio>
 	</div>
 </template>
 <script lang="ts">
+import { MutationTypes } from "@/store/mutations";
 import { defineComponent } from "@vue/runtime-core"
 
 export default defineComponent({
 	name: 'Card',
-	props:['musicNumber'],
+	props:['music'],
 	components: {
 	},
-	created(){
-
+	created(){},
+	methods:{
+		handleMusicNumber(){
+			return this.$store.state.musicNumber
+		},
+		handleLengthMusicNumber(){
+			return this.$store.state.musicData.length
+		},
+		handleOpen(){
+			if(!this.$store.state.open){
+				this.$store.commit(MutationTypes.SET_OPEN)
+			}
+		},
+		handleLoadStart(e:HTMLAudioElement){
+			console.log('event',e)
+		}
 	}
 });
 </script>
