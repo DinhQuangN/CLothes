@@ -1,14 +1,16 @@
-import { IMusic } from "@/utils/interface";
+import { IMusic } from '@/utils/interface';
 
 export interface State {
 	loading: boolean;
-	open:boolean;
+	open: boolean;
 	musicNumber: number;
-	musicData:IMusic[]
+	musicData: IMusic[];
+	play: boolean;
 }
 export const state: State = {
 	loading: false,
 	musicNumber: 0,
-	open:false,
-	musicData:[] as IMusic[]
+	open: false,
+	musicData: [] as IMusic[],
+	play: false
 };
