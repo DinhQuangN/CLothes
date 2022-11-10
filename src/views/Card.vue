@@ -10,8 +10,8 @@
 		<div class="w-full h-[270px] flex justify-center relative">
 			<img
 				:class="[
-					'w-[200px] h-[200px] object-cover rounded-[50%]',
-					play ? 'music_logo' : ' '
+					'w-[200px] h-[200px] object-cover rounded-[50%] music_logo',
+					play ? 'playing' : ' '
 				]"
 				:src="music[handleMusicNumber()].thumbnail"
 				alt=""

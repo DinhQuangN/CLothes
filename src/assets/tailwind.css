@@ -74,7 +74,13 @@ ul {
 	background: papayawhip;
 }
 .music_logo {
-	animation: music-logo infinite 30s linear;
+	animation: music-logo 30s linear;
+	animation-iteration-count: infinite;
+	animation-play-state: paused;
+	user-select: none;
+}
+.music_logo.playing {
+	animation-play-state: running;
 }
 @keyframes music-logo {
 	from {
