@@ -45,7 +45,6 @@ export default defineComponent({
 	watch: {
 		musicNumber() {
 			this.$store.state.musicNumber;
-			console.log(this.$store.state.musicNumber);
 		}
 	},
 	methods: {

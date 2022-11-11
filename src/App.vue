@@ -12,10 +12,10 @@
 	</div>
 </template>
 <script lang="ts">
+import ListVue from '@/components/List.vue';
+import { ActionTypes } from '@/store/actions';
+import CardVue from '@/views/Card.vue';
 import { defineComponent } from '@vue/runtime-core';
-import ListVue from './components/List.vue';
-import { ActionTypes } from './store/actions';
-import CardVue from './views/Card.vue';
 export default defineComponent({
 	name: 'App',
 	components: {

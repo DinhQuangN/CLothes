@@ -31,11 +31,8 @@ export default defineComponent({
 			return timer(this.dura);
 		}
 	},
-	mounted() {
-		console.log('mounted');
-	},
+	mounted() {},
 	created() {
-		console.log('create');
 		this.handleDuration();
 	},
 	watch: {}

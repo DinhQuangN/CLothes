@@ -234,7 +234,6 @@ export default defineComponent({
 		},
 		handleShuffle() {
 			const num = this.randomNumber();
-			console.log('handleShuffle', num);
 			return this.$store.commit(MutationTypes.SET_MUSIC_NUMBER, num);
 		},
 		randomNumber(): number {
